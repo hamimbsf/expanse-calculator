@@ -12,8 +12,63 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-
-    
+    <main class="flex items-center justify-center bg-base-100 h-screen p-4 shadow-2xl">
+      <section class="space-y-4">
+        <h1 class="text-4xl text-center font-bold">Programmer Expenses Assistant</h1>
+        <div class="flex gap-5 justify-between">
+          <button class="btn btn-active btn-secondary btn-wide">Assistant</button>
+          <button class="btn btn-active btn-secondary btn-wide">History</button>
+        </div>
+        <div class=" space-y-4">
+            <form class="">
+                <!-- Income -->
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Income</span>
+                </label>
+                <input type="number" placeholder="Enter Income" class="input input-bordered" required />
+              </div>
+              <!-- software and course expenses -->
+              <div class="flex justify-between">
+                   <!-- Software Expenses -->
+                <div class="form-control">
+                    <label class="label">
+                      <span class="label-text font-bold">Software</span>
+                    </label>
+                    <input type="number" placeholder="Enter Income" class="input w-full input-bordered" required />
+                  </div>
+                  <!-- Course Expenses -->
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text font-bold">Course</span>
+                    </label>
+                    <input type="number" placeholder="Enter Income" class="input w-full input-bordered" required />
+                  </div>
+               </div>
+               <!-- Internet Expenses -->
+               <div class="form-control w-1/2">
+                <label class="label">
+                  <span class="label-text font-bold">Internet</span>
+                </label>
+                <input type="number" placeholder="Enter Income" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="calculate" class="btn w-full btn-primary">Calculate</button>
+              </div>
+              <!-- Savings -->
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Internet</span>
+                </label>
+                <input type="number" placeholder="Enter Income" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button class="btn w-full btn-primary">Calculate Savings</button>
+              </div>
+            </form>
+          </div>
+      </section>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
