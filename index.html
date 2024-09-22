@@ -16,17 +16,17 @@
       <section class="space-y-4">
         <h1 class="text-4xl text-center font-bold">Programmer Expenses Assistant</h1>
         <div class="flex gap-5 justify-between">
-          <button class="btn btn-active btn-secondary btn-wide">Assistant</button>
-          <button class="btn btn-active btn-secondary btn-wide">History</button>
+          <button id="assistant" class="btn btn-active btn-secondary btn-wide">Assistant</button>
+          <button id="history" class="btn btn-active btn-wide">History</button>
         </div>
-        <div class=" space-y-4">
-            <form class="">
+        <div class="space-y-4">
+            <form id="assistant-form" class="">
                 <!-- Income -->
               <div class="form-control">
                 <label class="label">
                   <span class="label-text font-bold">Income</span>
                 </label>
-                <input type="number" placeholder="Enter Income" class="input input-bordered" required />
+                <input id="income" type="number" placeholder="Enter Income" class="input input-bordered" required />
               </div>
               <!-- software and course expenses -->
               <div class="flex justify-between">
@@ -35,14 +35,14 @@
                     <label class="label">
                       <span class="label-text font-bold">Software</span>
                     </label>
-                    <input type="number" placeholder="Enter Income" class="input w-full input-bordered" required />
+                    <input id="software" type="number" placeholder="Enter Income" class="input w-full input-bordered" required />
                   </div>
                   <!-- Course Expenses -->
                   <div class="form-control">
                     <label class="label">
                       <span class="label-text font-bold">Course</span>
                     </label>
-                    <input type="number" placeholder="Enter Income" class="input w-full input-bordered" required />
+                    <input id="course" type="number" placeholder="Enter Income" class="input w-full input-bordered" required />
                   </div>
                </div>
                <!-- Internet Expenses -->
@@ -50,7 +50,7 @@
                 <label class="label">
                   <span class="label-text font-bold">Internet</span>
                 </label>
-                <input type="number" placeholder="Enter Income" class="input input-bordered" required />
+                <input id="internet" type="number" placeholder="Enter Income" class="input input-bordered" required />
               </div>
               <div class="form-control mt-6">
                 <button id="calculate" class="btn w-full btn-primary">Calculate</button>
@@ -58,17 +58,50 @@
               <!-- Savings -->
               <div class="form-control">
                 <label class="label">
-                  <span class="label-text font-bold">Internet</span>
+                  <span class="label-text font-bold">Savings</span>
                 </label>
-                <input type="number" placeholder="Enter Income" class="input input-bordered" required />
+                <input id="savings" type="number" placeholder="Enter savings amount" class="input input-bordered" required />
               </div>
               <div class="form-control mt-6">
-                <button class="btn w-full btn-primary">Calculate Savings</button>
+                <button id="calculate-savings" class="btn w-full btn-primary">Calculate Savings</button>
               </div>
             </form>
           </div>
+          <!-- Result -->
+          <div id="result" class="mt-5 border-4 hidden border-gray-300 p-4 rounded-xl">
+            <h1 class="text-3xl text-center font-bold">Result Summary</h1>
+            <div id="result" class="pt-4 grid grid-cols-2">
+                <div class="mt-4 border-l-4 rounded-xl p-2 border-blue-500">
+                    <h2 class="text-xl font-bold">Total Expense</h2>
+                    <p id="total-expense" class="font-bold text-2xl">$00</p>
+                </div>
+                <div class="mt-4 border-l-4 rounded-xl p-2 border-green-500">
+                    <h2 class="text-xl font-bold">Balance</h2>
+                    <p id="balance" class="font-bold text-2xl">$00</p>
+                </div>
+                <div class="mt-4 border-l-4 rounded-xl p-2 border-purple-500">
+                    <h2 class="text-xl font-bold">
+                        Savings Amount
+                    </h2>
+                    <p id="savings-amount" class="font-bold text-2xl">$00</p>
+                </div>
+                <div class="mt-4 border-l-4 rounded-xl p-2 border-yellow-500">
+                    <h2 class="text-xl font-bold">
+                        Remaining Balance
+                    </h2>
+                    <p id="remaining-balance" class="font-bold text-2xl">$00</p>
+                </div>
+              </div>
+          </div>
+          <!-- Expense History -->
+          <div id="expense-history" class="mt-5 border-2 bg-blue-300 border-gray-300 p-4 hidden rounded-xl">
+            <h1 class="text-3xl text-center font-bold">Expense History</h1>
+            <div id="expense-history-list" class="grid grid-cols-2 gap-4"></div>
+          </div>
       </section>
     </main>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/touch.js"></script>
   </body>
 </html>
